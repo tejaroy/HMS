@@ -1,0 +1,370 @@
+{
+	"info": {
+		"_postman_id": "3a98e324-2a29-43a8-b4d8-f00e081859f0",
+		"name": "Django",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Users",
+					"id": "996eeb6b-c469-49cc-b5a8-332f8ddca1ec",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/users"
+					},
+					"response": [
+						{
+							"id": "2471176a-653f-4e6f-b529-24c7652a0c59",
+							"name": "List of all users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://127.0.0.1:8000/users"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Feb 2024 09:06:03 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.8"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "403"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"code\": \"200\",\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"first_name\": \"yanagala\",\n            \"last_name\": \"teja\",\n            \"phone\": \"9182020006\",\n            \"is_active\": true,\n            \"valid_until\": \"2024-12-31\"\n        },\n        {\n            \"first_name\": \"yanagala\",\n            \"last_name\": \"teja\",\n            \"phone\": \"9182020064\",\n            \"is_active\": true,\n            \"valid_until\": \"2024-12-31\"\n        },\n        {\n            \"first_name\": \"raju\",\n            \"last_name\": \"teja\",\n            \"phone\": \"9182020065\",\n            \"is_active\": true,\n            \"valid_until\": \"2024-12-31\"\n        }\n    ]\n}"
+						},
+						{
+							"id": "09bea488-a7f3-416b-8176-24cbdfee93b1",
+							"name": "Single User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://127.0.0.1:8000/users/9182020006"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Feb 2024 09:08:18 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.8"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "165"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"code\": \"200\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"first_name\": \"yanagala\",\n        \"last_name\": \"teja\",\n        \"phone\": \"9182020006\",\n        \"is_active\": true,\n        \"valid_until\": \"2024-12-31\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Users",
+					"id": "484e02df-0415-43ed-a730-b2edda0b34a2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"teja\",\r\n    \"first_name\": \"raju\",\r\n    \"last_name\": \"teja\",\r\n    \"is_active\": true,\r\n    \"valid_until\": \"2024-12-31\",\r\n    \"phone\": \"8082029002\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/users/"
+					},
+					"response": [
+						{
+							"id": "60715628-f12a-4c46-817e-a4f883ba2247",
+							"name": "Create User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\": \"teja\",\r\n    \"first_name\": \"raju\",\r\n    \"last_name\": \"teja\",\r\n    \"is_active\": true,\r\n    \"valid_until\": \"2024-12-31\",\r\n    \"phone\": \"8082029002\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://127.0.0.1:8000/users/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Feb 2024 09:12:39 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.8"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "161"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"code\": \"200\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"first_name\": \"raju\",\n        \"last_name\": \"teja\",\n        \"phone\": \"8082029002\",\n        \"is_active\": true,\n        \"valid_until\": \"2024-12-31\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "User Update",
+					"id": "5b1f62bd-f65e-4659-b283-cd8cf3731086",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 46,\r\n    \"password\": \"yanagala\"\r\n    // \"first_name\": null,\r\n    // \"last_name\": null,\r\n    // \"is_active\": false,\r\n    // \"valid_until\": \"2024-12-31\",\r\n    // \"phone\": \"8082029002\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/users/"
+					},
+					"response": [
+						{
+							"id": "7157cdde-ee0e-4fd0-9ca8-3c36f8245d13",
+							"name": "User Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 46,\r\n    \"password\": \"yanagala\"\r\n    // \"first_name\": null,\r\n    // \"last_name\": null,\r\n    // \"is_active\": false,\r\n    // \"valid_until\": \"2024-12-31\",\r\n    // \"phone\": \"8082029002\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://127.0.0.1:8000/users/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Feb 2024 09:14:18 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.8"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "184"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"code\": \"200\",\n    \"User Data Updated Successfully\": \"Success\",\n    \"data\": {\n        \"first_name\": \"raju\",\n        \"last_name\": \"teja\",\n        \"phone\": \"8082029002\",\n        \"is_active\": true,\n        \"valid_until\": \"2024-12-31\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "User Delete",
+					"id": "acf89198-3d02-4c3a-9b77-2d8353132901",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:8000/users/9182020006"
+					},
+					"response": [
+						{
+							"id": "1445c73f-c0c8-4418-8f31-0e6c9df7e754",
+							"name": "Users",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://127.0.0.1:8000/users/9182020006"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Feb 2024 09:16:41 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.8"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "72"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"code\": \"200\",\n    \"User Data Deleted Successfully\": \"Success\",\n    \"data\": {}\n}"
+						}
+					]
+				}
+			],
+			"id": "a50200c9-da14-4d83-931b-bcd605944c42"
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "New Request",
+					"id": "35cd8c6d-1cb1-481e-a036-c2c3a63c0d4a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "1fa19f4d-4ab3-44a7-b16e-de0e86e96d6c"
+		}
+	]
+}
